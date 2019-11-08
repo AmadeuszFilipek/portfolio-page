@@ -1,12 +1,12 @@
 <html lang="en">
-
 <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
+    <title>Amadeusz filipek webpage</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -36,21 +36,21 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Amadeusz Filipek</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Amadeusz Filipek</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Facebook</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/amadeusz.filipek">Facebook</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resume</a>
+                        <a class="nav-link" href="{% static 'Amadeusz Filipek.pdf' %}">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -67,6 +67,8 @@
                 <p>
                     <a href="mailto:amadeusz.filipek@gmail.com" class="btn btn-primary my-2">Email me</a>
                 </p>
+
+                <img src="{% static 'ryj.jpg' %}" />
             </div>
         </section>
 

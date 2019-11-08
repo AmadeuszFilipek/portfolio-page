@@ -8,11 +8,8 @@ class Blog(models.Model):
     publish_date = models.DateTimeField()
     body = models.TextField()
 
-# add the blog app to the settings
-
-# create a migration
-
-# migrate
-
-
-# Create your models here.
+    def summary(self):
+        return self.body[:100] + '...'
+    
+    def pub_date_pretty(self):
+        return self.publish_date.strftime("%b %d %Y")
