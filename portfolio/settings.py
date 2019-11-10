@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -78,9 +77,9 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'newdatabase',
+        'NAME': 'portfoliodb',
         'USER': 'postgres',
-        'PASSWORD': 'oxygen18',
+        'PASSWORD': 'django1234',
         'HOST': 'localhost',
         'PORT': '5432'
     }
@@ -127,8 +126,13 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'portfolio/static')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static') 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
