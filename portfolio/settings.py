@@ -26,6 +26,9 @@ ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 DEFAULT_FILE_STORAGE = 'portfolio.storage_backends.MediaStorage'
 
+# for fixing the login authentication in boto3 for the bucket
+AWS_DEFAULT_ACL = None
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
