@@ -30,7 +30,7 @@ DEFAULT_FILE_STORAGE = 'portfolio.storage_backends.MediaStorage'
 AWS_DEFAULT_ACL = None
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
